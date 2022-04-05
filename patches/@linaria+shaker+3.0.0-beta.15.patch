@@ -1,0 +1,31 @@
+diff --git a/node_modules/@linaria/shaker/esm/index.js b/node_modules/@linaria/shaker/esm/index.js
+index 3b87ea6..09988e6 100644
+--- a/node_modules/@linaria/shaker/esm/index.js
++++ b/node_modules/@linaria/shaker/esm/index.js
+@@ -3,18 +3,22 @@ import { transformSync } from '@babel/core';
+ import { debug } from '@linaria/logger';
+ import { buildOptions } from '@linaria/babel-preset';
+ import shake from './shaker';
++import preset from '@babel/preset-env'
++import plugin1 from '@linaria/preeval'
++import plugin2 from 'babel-plugin-transform-react-remove-prop-types'
++import plugin3 from '@babel/plugin-transform-runtime'
+ 
+ function prepareForShake(filename, options, code) {
+   const transformOptions = buildOptions(filename, options);
+   transformOptions.ast = true;
+-  transformOptions.presets.unshift([require.resolve('@babel/preset-env'), {
++  transformOptions.presets.unshift([preset, {
+     targets: 'ie 11',
+     // we need this plugin so we list it explicitly, explanation in `packages/extractor/src/index`
+     include: ['@babel/plugin-transform-template-literals']
+   }]);
+-  transformOptions.presets.unshift([require.resolve('@linaria/preeval'), options]);
+-  transformOptions.plugins.unshift(require.resolve('babel-plugin-transform-react-remove-prop-types'));
+-  transformOptions.plugins.unshift([require.resolve('@babel/plugin-transform-runtime'), {
++  transformOptions.presets.unshift([plugin1, options]);
++  transformOptions.plugins.unshift(plugin2);
++  transformOptions.plugins.unshift([plugin3, {
+     useESModules: false
+   }]);
+   debug('evaluator:shaker:transform', `Transform ${filename} with options ${JSON.stringify(transformOptions, null, 2)}`);

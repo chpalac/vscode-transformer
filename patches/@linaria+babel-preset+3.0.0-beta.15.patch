@@ -1,0 +1,43 @@
+diff --git a/node_modules/@linaria/babel-preset/esm/evaluators/buildOptions.js b/node_modules/@linaria/babel-preset/esm/evaluators/buildOptions.js
+index 43db8fd..1ad3f89 100644
+--- a/node_modules/@linaria/babel-preset/esm/evaluators/buildOptions.js
++++ b/node_modules/@linaria/babel-preset/esm/evaluators/buildOptions.js
+@@ -1,20 +1,25 @@
++import plugin1 from '@babel/plugin-transform-modules-commonjs'
++import plugin2 from '@babel/plugin-proposal-export-namespace-from'
++import plugin3 from '../dynamic-import-noop'
++import preset from '../index'
++
+ /**
+  * This file handles preparing babel config for Linaria preevaluation.
+  */
+ export default function buildOptions(filename, options) {
+   const plugins = [// Include these plugins to avoid extra config when using { module: false } for webpack
+-  '@babel/plugin-transform-modules-commonjs', '@babel/plugin-proposal-export-namespace-from'];
++    plugin1, plugin2];
+   const defaults = {
+     caller: {
+       name: 'linaria',
+       evaluate: true
+     },
+     filename: filename,
+-    presets: [[require.resolve('../index'), { ...(options || {})
++    presets: [[preset, { ...(options || {})
+     }]],
+-    plugins: [...plugins.map(name => require.resolve(name)), // We don't support dynamic imports when evaluating, but don't wanna syntax error
++    plugins: [...plugins, // We don't support dynamic imports when evaluating, but don't wanna syntax error
+     // This will replace dynamic imports with an object that does nothing
+-    require.resolve('../dynamic-import-noop')]
++    plugin3]
+   };
+   const babelOptions = // Shallow copy the babel options because we mutate it later
+   options?.babelOptions ? { ...options.babelOptions
+@@ -34,7 +39,7 @@ export default function buildOptions(filename, options) {
+       // We require the file from internal path which is not the same one that we export
+       // This case won't get caught and the preset won't filtered, even if they are same
+       // So we add an extra check for top level linaria/babel
+-      name === 'linaria/babel' || name === '@linaria' || name === '@linaria/babel-preset' || name === require.resolve('../index') || // Also add a check for the plugin names we include for bundler support
++      name === 'linaria/babel' || name === '@linaria' || name === '@linaria/babel-preset' || name === preset || // Also add a check for the plugin names we include for bundler support
+       plugins.includes(name)) {
+         return false;
+       } // Loop through the default presets/plugins to see if it already exists
