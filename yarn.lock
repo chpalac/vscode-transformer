@@ -3949,10 +3949,10 @@ v9helper-transform-style-object@0.0.1-20220331.5:
     "@griffel/core" "^1.0.7"
     v9helper-babel-plugin-shorthands "0.0.1-20220331"
 
-v9helper@0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/v9helper/-/v9helper-0.0.2.tgz#0fc2b54639a641ef5731ab947d74bcae85e5e35e"
-  integrity sha512-F/QIIA1SVaaioqsbKJDnUrP0mw1ne/1oNbV34tiktqES1dz4t8+fRoHLgvAclG5lso7yhDoc8HsScXMqdKPhVQ==
+v9helper@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/v9helper/-/v9helper-0.0.3.tgz#28016e863d574ce0123caa07af5c4a8efb920eaf"
+  integrity sha512-lBbI0xqeUx4obeGp4JPm2RcaRe3wf0t0EmXpiAh8TxZ6u1MRci1T7rySD/+uYx7xc2CyY4/qGmedtGPvPgsVGQ==
   dependencies:
     "@babel/core" "^7.17.5"
     "@babel/preset-typescript" "^7.16.7"
