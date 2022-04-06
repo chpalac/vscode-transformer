@@ -3,7 +3,7 @@
 import * as vscode from 'vscode';
 import * as Prism from 'prismjs';
 import {transformStylesObject} from 'v9helper-transform-style-object';
-import * as v9helper from 'v9helper'
+import {main} from 'v9helper';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -42,14 +42,19 @@ export function activate(context: vscode.ExtensionContext) {
 	// });
 
 	let disposable = vscode.commands.registerCommand('transformer.helloWorld', async () => {
-		// console.log(vscode.window.activeTextEditor?.document.uri);
-		const fn = v9helper.main({
-			exportName: 'default',
+		console.log(vscode.window.activeTextEditor?.document.uri);
+		const fn = main({
+			exportName: 'avatarStyles',
 			inputFilename: vscode.window.activeTextEditor?.document.uri.path,
 			isTransformAllThemes: true
-		})
-		console.log('command: ', fn);
-		console.log('v9helper', v9helper)
+		})({
+			variables: { hasCursorPointer: true },
+			isNamespaced: false,
+			componentProps: undefined,
+			variable: undefined,
+			variableProps: undefined,
+		});
+		console.log('command: ', fn); 
 	  });
 
 	context.subscriptions.push(disposable);
