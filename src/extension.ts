@@ -19,45 +19,93 @@ export function activate(context: vscode.ExtensionContext) {
 	// The commandId parameter must match the command field in package.json
 	// let disposable = 
 	
-	// vscode.commands.registerCommand('transformer.t', () => {
-	// 	const editor = vscode.window.activeTextEditor;
+	let transforSelection = vscode.commands.registerCommand('transformer.selection', () => {
+		const editor = vscode.window.activeTextEditor;
     
-	// 	console.log('filename:', vscode.window.activeTextEditor?.document.fileName)
-	// 	main({ inputFilename: vscode.window.activeTextEditor?.document.fileName, exportName: 'result', isTransformAllThemes: true})
-	// 	var selection = editor?.selection;
-	// 	var text = editor?.document.getText(selection);
+		main({ inputFilename: vscode.window.activeTextEditor?.document.fileName, exportName: 'result', isTransformAllThemes: true});
+		var selection = editor?.selection;
+		var text = editor?.document.getText(selection);
 		
-	// 	const panel = vscode.window.createWebviewPanel('transformer', 'Transformer', vscode.ViewColumn.Beside, {
-	// 		retainContextWhenHidden: true,
-	// 		enableScripts: true
-	// 	});
-
-		
-	// 	panel.webview.html = getWebviewContent(`${transformStylesObject(text)}`, panel, context);
-
-	// 	vscode.window.onDidChangeTextEditorSelection((ev) => {
-	// 		panel.webview.html = getWebviewContent(`${transformStylesObject(ev.textEditor.document.getText(ev.textEditor.selection))}`, panel, context);
-	// 	});
-
-	// });
-
-	let disposable = vscode.commands.registerCommand('transformer.helloWorld', async () => {
-		console.log(vscode.window.activeTextEditor?.document.uri);
-		const fn = main({
-			exportName: 'avatarStyles',
-			inputFilename: vscode.window.activeTextEditor?.document.uri.path,
-			isTransformAllThemes: true
-		})({
-			variables: { hasCursorPointer: true },
-			isNamespaced: false,
-			componentProps: undefined,
-			variable: undefined,
-			variableProps: undefined,
+		const panel = vscode.window.createWebviewPanel('transformer', 'Transformer', vscode.ViewColumn.Beside, {
+			retainContextWhenHidden: true,
+			enableScripts: true
 		});
-		console.log('command: ', fn); 
+
+		
+		panel.webview.html = getWebviewContent(`${transformStylesObject(text)}`, panel, context);
+
+		vscode.window.onDidChangeTextEditorSelection((ev) => {
+			panel.webview.html = getWebviewContent(`${transformStylesObject(ev.textEditor.document.getText(ev.textEditor.selection))}`, panel, context);
+		});
+
+	});
+
+	let transforFile = vscode.commands.registerCommand('transformer.file', async () => {
+		
+		const exportName = await vscode.window.showInputBox({
+			placeHolder: "What is the name of the exported function?"
+		});
+		
+		const { value: isTransformAllThemes } = await vscode.window.showQuickPick<{
+			label: string;
+			value: boolean;
+		}>([
+			{
+				label: 'Yes',
+				value: true,
+			},
+			{
+				label: 'No',
+				value: false,
+			}
+		], {
+			placeHolder: "Transform all themes?"
+		}) || { value: false };
+
+		const  isNamespaced = /namespace/.test(`${vscode.window.activeTextEditor?.document.uri.path}`);
+
+		const variables =  await vscode.window.showInputBox({
+			placeHolder: !isNamespaced ? "Enter the name of the variables separated by commas" : "Enter the name of the variable"
+		});
+		let variableProps;
+		if(isNamespaced){
+			variableProps = await vscode.window.showInputBox({
+				placeHolder: "Enter the name of the variable props separated by commas"
+			});
+		}
+
+		const componentProps = await vscode.window.showInputBox({
+			placeHolder: "Enter the name of the component props separated by commas"
+		});
+
+		const result = main({
+			exportName,
+			inputFilename: vscode.window.activeTextEditor?.document.uri.path,
+			isTransformAllThemes
+		})({
+			variables: !isNamespaced ? variables?.split(',').reduce((acc, curr) => ({
+				...acc,
+				[curr]: true
+			}), {}) : undefined,
+			variable: isNamespaced ? variables : undefined,
+			isNamespaced,
+			componentProps: !!componentProps ? componentProps.split(',').reduce((acc, curr) => ({
+				...acc,
+				[curr]: true
+			}), {}) : undefined,
+			variableProps: isNamespaced ? variableProps?.split(',').reduce((acc, curr) => ({}), {}) : undefined
+		});		
+
+		const panel = vscode.window.createWebviewPanel('transformer', 'Transformer', vscode.ViewColumn.Beside, {
+			retainContextWhenHidden: true,
+			enableScripts: true
+		});
+
+		
+		panel.webview.html = getWebviewContent(`${result}`, panel, context);
 	  });
 
-	context.subscriptions.push(disposable);
+	context.subscriptions.push(transforSelection, transforFile);
 	
 }
 

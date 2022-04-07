@@ -10,19 +10,19 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:transformer.helloWorld",
-    "onCommand:transformer.say"
+    "onCommand:transformer.selection",
+    "onCommand:transformer.file"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "transformer.helloWorld",
-        "title": "Hello World"
+        "command": "transformer.file",
+        "title": "Make Styles: transform file"
       },
       {
-        "command": "transformer.say",
-        "title": "Say"
+        "command": "transformer.selection",
+        "title": "Make Styles: transform selected styles"
       }
     ]
   },
