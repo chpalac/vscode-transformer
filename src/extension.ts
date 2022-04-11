@@ -41,8 +41,9 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 
 	let transforFile = vscode.commands.registerCommand('transformer.file', async () => {
-		
-		const exportName = await vscode.window.showInputBox({
+		const  isNamespaced = /namespace/.test(`${vscode.window.activeTextEditor?.document.uri.path}`);
+
+		const exportName = isNamespaced ? 'default' : await vscode.window.showInputBox({
 			placeHolder: "What is the name of the exported function?"
 		});
 		
@@ -62,7 +63,6 @@ export function activate(context: vscode.ExtensionContext) {
 			placeHolder: "Transform all themes?"
 		}) || { value: false };
 
-		const  isNamespaced = /namespace/.test(`${vscode.window.activeTextEditor?.document.uri.path}`);
 
 		const variables =  await vscode.window.showInputBox({
 			placeHolder: !isNamespaced ? "Enter the name of the variables separated by commas" : "Enter the name of the variable"
@@ -73,10 +73,12 @@ export function activate(context: vscode.ExtensionContext) {
 				placeHolder: "Enter the name of the variable props separated by commas"
 			});
 		}
-
-		const componentProps = await vscode.window.showInputBox({
-			placeHolder: "Enter the name of the component props separated by commas"
-		});
+		let componentProps;
+		if(!isNamespaced){
+			componentProps = await vscode.window.showInputBox({
+				placeHolder: "Enter the name of the component props separated by commas"
+			});
+		}
 
 		const result = main({
 			exportName,
@@ -89,7 +91,7 @@ export function activate(context: vscode.ExtensionContext) {
 			}), {}) : undefined,
 			variable: isNamespaced ? variables : undefined,
 			isNamespaced,
-			componentProps: !!componentProps ? componentProps.split(',').reduce((acc, curr) => ({
+			componentProps: (!isNamespaced && !!componentProps) ? componentProps.split(',').reduce((acc, curr) => ({
 				...acc,
 				[curr]: true
 			}), {}) : undefined,
