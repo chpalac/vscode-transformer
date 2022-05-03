@@ -63,6 +63,6 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "v9helper": "^0.0.6",
-    "v9helper-transform-style-object": "0.0.1-20220331.5"
+    "v9helper-transform-style-object": "^0.0.3"
   }
 }

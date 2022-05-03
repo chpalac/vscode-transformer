@@ -3916,14 +3916,6 @@ v8-compile-cache@^2.0.3:
   resolved "https://registry.yarnpkg.com/v8-compile-cache/-/v8-compile-cache-2.3.0.tgz#2de19618c66dc247dcfb6f99338035d8245a2cee"
   integrity sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==
 
-v9helper-babel-plugin-shorthands@0.0.1-20220331:
-  version "0.0.1-20220331"
-  resolved "https://registry.yarnpkg.com/v9helper-babel-plugin-shorthands/-/v9helper-babel-plugin-shorthands-0.0.1-20220331.tgz#dae357ba33b89e122d053c1edb808379ecd45c4c"
-  integrity sha512-iiO52OGTASTNdnCB0x12TruAlxCWMmJcxg46j14htjlXqt9lULNDvA5av92ISd0NjjkUUmLCilRWFoZKmyFI1A==
-  dependencies:
-    "@babel/core" "^7.17.5"
-    "@griffel/core" "^1.0.7"
-
 v9helper-babel-plugin-shorthands@^0.0.3:
   version "0.0.3"
   resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/v9helper-babel-plugin-shorthands/-/v9helper-babel-plugin-shorthands-0.0.3.tgz#10e01ec31d442358b3931c7daa21e8808a5de3ca"
@@ -3932,15 +3924,15 @@ v9helper-babel-plugin-shorthands@^0.0.3:
     "@babel/core" "^7.17.5"
     "@griffel/core" "^1.0.7"
 
-v9helper-transform-style-object@0.0.1-20220331.5:
-  version "0.0.1-20220331.5"
-  resolved "https://registry.yarnpkg.com/v9helper-transform-style-object/-/v9helper-transform-style-object-0.0.1-20220331.5.tgz#991fce7789a1d9cdcf444e755911bc60fee07d40"
-  integrity sha512-aO1g5DsoaNzzYnIWqxj7Hh0W+5dT9DYr2lnTc1gDOVzfe87B9VX2QQ56PtvlU/IEydZTaUIlZAltG8zGsRdDEw==
+v9helper-transform-style-object@^0.0.3:
+  version "0.0.3"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/v9helper-transform-style-object/-/v9helper-transform-style-object-0.0.3.tgz#18216baadab4c9382046ccbacc0ec0a0138c4823"
+  integrity sha1-GCFrqtq0yTggRsy6zA7AoBOMSCM=
   dependencies:
     "@babel/core" "^7.17.5"
     "@babel/standalone" "^7.17.6"
     "@griffel/core" "^1.0.7"
-    v9helper-babel-plugin-shorthands "0.0.1-20220331"
+    v9helper-babel-plugin-shorthands "^0.0.3"
 
 v9helper@^0.0.6:
   version "0.0.6"
