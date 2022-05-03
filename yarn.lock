@@ -3924,6 +3924,14 @@ v9helper-babel-plugin-shorthands@0.0.1-20220331:
     "@babel/core" "^7.17.5"
     "@griffel/core" "^1.0.7"
 
+v9helper-babel-plugin-shorthands@^0.0.3:
+  version "0.0.3"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/v9helper-babel-plugin-shorthands/-/v9helper-babel-plugin-shorthands-0.0.3.tgz#10e01ec31d442358b3931c7daa21e8808a5de3ca"
+  integrity sha1-EOAewx1EI1izkxx9qiHogIpd48o=
+  dependencies:
+    "@babel/core" "^7.17.5"
+    "@griffel/core" "^1.0.7"
+
 v9helper-transform-style-object@0.0.1-20220331.5:
   version "0.0.1-20220331.5"
   resolved "https://registry.yarnpkg.com/v9helper-transform-style-object/-/v9helper-transform-style-object-0.0.1-20220331.5.tgz#991fce7789a1d9cdcf444e755911bc60fee07d40"
@@ -3934,10 +3942,10 @@ v9helper-transform-style-object@0.0.1-20220331.5:
     "@griffel/core" "^1.0.7"
     v9helper-babel-plugin-shorthands "0.0.1-20220331"
 
-v9helper@0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/v9helper/-/v9helper-0.0.3.tgz#28016e863d574ce0123caa07af5c4a8efb920eaf"
-  integrity sha512-lBbI0xqeUx4obeGp4JPm2RcaRe3wf0t0EmXpiAh8TxZ6u1MRci1T7rySD/+uYx7xc2CyY4/qGmedtGPvPgsVGQ==
+v9helper@^0.0.6:
+  version "0.0.6"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/v9helper/-/v9helper-0.0.6.tgz#cc590cd59ea117ff79cc8187cb26b86c1256c4c4"
+  integrity sha1-zFkM1Z6hF/95zIGHyya4bBJWxMQ=
   dependencies:
     "@babel/core" "^7.17.5"
     "@babel/preset-typescript" "^7.16.7"
@@ -3947,7 +3955,7 @@ v9helper@0.0.3:
     "@linaria/shaker" "^3.0.0-beta.15"
     lodash "^4.17.21"
     prompts "^2.4.2"
-    v9helper-babel-plugin-shorthands "0.0.1-20220331"
+    v9helper-babel-plugin-shorthands "^0.0.3"
 
 watchpack@^2.3.1:
   version "2.3.1"
