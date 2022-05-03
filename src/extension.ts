@@ -22,7 +22,7 @@ export function activate(context: vscode.ExtensionContext) {
 	let transforSelection = vscode.commands.registerCommand('transformer.selection', () => {
 		const editor = vscode.window.activeTextEditor;
     
-		main({ inputFilename: vscode.window.activeTextEditor?.document.fileName, exportName: 'result', isTransformAllThemes: true});
+		main({ inputFilename: vscode.window.activeTextEditor?.document.fileName || '', exportName: 'result', isTransformAllThemes: true});
 		var selection = editor?.selection;
 		var text = editor?.document.getText(selection);
 		
@@ -45,7 +45,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 		const exportName = isNamespaced ? 'default' : await vscode.window.showInputBox({
 			placeHolder: "What is the name of the exported function?"
-		});
+		}) || '';
 		
 		const { value: isTransformAllThemes } = await vscode.window.showQuickPick<{
 			label: string;
@@ -79,17 +79,17 @@ export function activate(context: vscode.ExtensionContext) {
 				placeHolder: "Enter the name of the component props separated by commas"
 			});
 		}
-
+		const preparedSiteVariables = {}
 		const result = main({
 			exportName,
-			inputFilename: vscode.window.activeTextEditor?.document.uri.path,
-			isTransformAllThemes
+			inputFilename: vscode.window.activeTextEditor?.document.uri.path || '',
+			isTransformAllThemes,
+			preparedSiteVariables
 		})({
-			variables: !isNamespaced ? variables?.split(',').reduce((acc, curr) => ({
+			variables: variables?.split(',').reduce((acc, curr) => ({
 				...acc,
 				[curr]: true
-			}), {}) : undefined,
-			variable: isNamespaced ? variables : undefined,
+			}), {}),
 			isNamespaced,
 			componentProps: (!isNamespaced && !!componentProps) ? componentProps.split(',').reduce((acc, curr) => ({
 				...acc,
