@@ -3,6 +3,9 @@
   "displayName": "transformer",
   "description": "",
   "version": "0.0.1",
+  "repository": {
+    "url": "https://github.com/chpalac/vscode-transformer"
+  },
   "engines": {
     "vscode": "^1.66.0"
   },
