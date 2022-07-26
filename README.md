@@ -18,8 +18,8 @@
 
 ### Selection:
 
-<img src="assets/selection.png" />
+<img src="assets/selection.gif" />
 
 ### Files:
 
-<img src="assets/files.png" />
+<img src="assets/files.gif" />
