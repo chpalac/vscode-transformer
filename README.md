@@ -10,6 +10,8 @@
 
 <img src="assets/install.png" />
 
+## Usage 
+
 ### Ctrl/Cmd+Shift+P > Make Styles:
 
 <img src="assets/ctrl+p+makes.png" />
