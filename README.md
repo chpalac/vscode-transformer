@@ -8,18 +8,18 @@
 
 3. Enjoy
 
-<img src="assets/install.png" />
+<img src="https://github.com/chpalac/vscode-transformer/tree/master/assets/assets/install.png" />
 
 ## Usage 
 
 ### Ctrl/Cmd+Shift+P > Make Styles:
 
-<img src="assets/ctrl+p+makes.png" />
+<img src="https://github.com/chpalac/vscode-transformer/tree/master/assets/assets/ctrl+p+makes.png" />
 
 ### Selection:
 
-<img src="assets/selection.gif" />
+<img src="https://github.com/chpalac/vscode-transformer/tree/master/assets/assets/selection.gif" />
 
 ### Files:
 
-<img src="assets/files.gif" />
+<img src="https://github.com/chpalac/vscode-transformer/tree/master/assets/assets/files.gif" />
