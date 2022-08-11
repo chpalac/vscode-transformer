@@ -969,15 +969,15 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fluentui/accessibility@^0.60.1":
-  version "0.60.1"
-  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/accessibility/-/accessibility-0.60.1.tgz#82b51e0502333b118058a77362a9331c3d32e6f4"
-  integrity sha1-grUeBQIzOxGAWKdzYqkzHD0y5vQ=
+"@fluentui/accessibility@^0.63.1":
+  version "0.63.1"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/accessibility/-/accessibility-0.63.1.tgz#afc98b3429b6f9254f4185dc60f4511c519b964a"
+  integrity sha1-r8mLNCm2+SVPQYXcYPRRHFGblko=
   dependencies:
     "@babel/runtime" "^7.10.4"
     lodash "^4.17.15"
 
-"@fluentui/dom-utilities@^1.1.1", "@fluentui/dom-utilities@^1.1.2":
+"@fluentui/dom-utilities@^1.1.1":
   version "1.1.2"
   resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/dom-utilities/-/dom-utilities-1.1.2.tgz#1a53e51e1ab1d40696ae7d355a970c68d496845f"
   integrity sha1-GlPlHhqx1AaWrn01WpcMaNSWhF8=
@@ -985,107 +985,107 @@
     "@uifabric/set-version" "^7.0.24"
     tslib "^1.10.0"
 
-"@fluentui/react-bindings@^0.60.1":
-  version "0.60.1"
-  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/react-bindings/-/react-bindings-0.60.1.tgz#0ac9a4f8571ff13f271d8dac0242c38e7e7b6a7a"
-  integrity sha1-Csmk+Fcf8T8nHY2sAkLDjn57ano=
+"@fluentui/react-bindings@^0.63.1":
+  version "0.63.1"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/react-bindings/-/react-bindings-0.63.1.tgz#3753348f44d1c4a5e24e01751b783fe6bf8c262d"
+  integrity sha1-N1M0j0TRxKXiTgF1G3g/5r+MJi0=
   dependencies:
     "@babel/runtime" "^7.10.4"
-    "@fluentui/accessibility" "^0.60.1"
-    "@fluentui/react-component-event-listener" "^0.60.1"
-    "@fluentui/react-component-ref" "^0.60.1"
-    "@fluentui/react-northstar-fela-renderer" "^0.60.1"
-    "@fluentui/react-northstar-styles-renderer" "^0.60.1"
-    "@fluentui/state" "^0.60.1"
-    "@fluentui/styles" "^0.60.1"
-    "@uifabric/utilities" "^7.32.3"
+    "@fluentui/accessibility" "^0.63.1"
+    "@fluentui/dom-utilities" "^1.1.1"
+    "@fluentui/react-component-event-listener" "^0.63.1"
+    "@fluentui/react-component-ref" "^0.63.1"
+    "@fluentui/react-northstar-fela-renderer" "^0.63.1"
+    "@fluentui/react-northstar-styles-renderer" "^0.63.1"
+    "@fluentui/state" "^0.63.1"
+    "@fluentui/styles" "^0.63.1"
     classnames "^2.2.6"
     lodash "^4.17.15"
     prop-types "^15.7.2"
     react-is "^16.6.3"
-    scheduler "^0.20.1"
 
-"@fluentui/react-component-event-listener@^0.60.1":
-  version "0.60.1"
-  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/react-component-event-listener/-/react-component-event-listener-0.60.1.tgz#ce36101b8bc4205dcf40f1d56ebe4854df8422b4"
-  integrity sha1-zjYQG4vEIF3PQPHVbr5IVN+EIrQ=
+"@fluentui/react-component-event-listener@^0.63.1":
+  version "0.63.1"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/react-component-event-listener/-/react-component-event-listener-0.63.1.tgz#c2af94893671f1d6bfe2a8a07dcfa2cb01b85f52"
+  integrity sha1-wq+UiTZx8da/4qigfc+iywG4X1I=
   dependencies:
     "@babel/runtime" "^7.10.4"
 
-"@fluentui/react-component-nesting-registry@^0.60.1":
-  version "0.60.1"
-  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/react-component-nesting-registry/-/react-component-nesting-registry-0.60.1.tgz#2b4adaeed5fc8600cb2f9e0868762d89b643d92c"
-  integrity sha1-K0ra7tX8hgDLL54IaHYtibZD2Sw=
+"@fluentui/react-component-nesting-registry@^0.63.1":
+  version "0.63.1"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/react-component-nesting-registry/-/react-component-nesting-registry-0.63.1.tgz#5f42232f6f9a8e44c0a22e9139112720ce5cf122"
+  integrity sha1-X0IjL2+ajkTAoi6ROREnIM5c8SI=
   dependencies:
     "@babel/runtime" "^7.10.4"
     prop-types "^15.7.2"
 
-"@fluentui/react-component-ref@^0.60.1":
-  version "0.60.1"
-  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/react-component-ref/-/react-component-ref-0.60.1.tgz#36c5b437af45248ddf2115aaebde102118a26699"
-  integrity sha1-NsW0N69FJI3fIRWq694QIRiiZpk=
+"@fluentui/react-component-ref@^0.63.1":
+  version "0.63.1"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/react-component-ref/-/react-component-ref-0.63.1.tgz#a7778e2a5c724d12e828afd994c93fa2da44f64e"
+  integrity sha1-p3eOKlxyTRLoKK/ZlMk/otpE9k4=
   dependencies:
     "@babel/runtime" "^7.10.4"
     react-is "^16.6.3"
 
-"@fluentui/react-icons-northstar@^0.60.1":
-  version "0.60.1"
-  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/react-icons-northstar/-/react-icons-northstar-0.60.1.tgz#2896f88c06e41a1bed657ebf331c594c2c878911"
-  integrity sha1-KJb4jAbkGhvtZX6/MxxZTCyHiRE=
+"@fluentui/react-icons-northstar@^0.63.1":
+  version "0.63.1"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/react-icons-northstar/-/react-icons-northstar-0.63.1.tgz#380a663091ac2f10906f31406a2e3a1b3869ac55"
+  integrity sha1-OApmMJGsLxCQbzFAai46GzhprFU=
   dependencies:
     "@babel/runtime" "^7.10.4"
-    "@fluentui/accessibility" "^0.60.1"
-    "@fluentui/react-bindings" "^0.60.1"
-    "@fluentui/styles" "^0.60.1"
+    "@fluentui/accessibility" "^0.63.1"
+    "@fluentui/react-bindings" "^0.63.1"
+    "@fluentui/styles" "^0.63.1"
     classnames "^2.2.6"
 
-"@fluentui/react-northstar-fela-renderer@^0.60.1":
-  version "0.60.1"
-  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/react-northstar-fela-renderer/-/react-northstar-fela-renderer-0.60.1.tgz#f03408dca098e7e83e4381383808d38d0c669408"
-  integrity sha1-8DQI3KCY5+g+Q4E4OAjTjQxmlAg=
+"@fluentui/react-northstar-fela-renderer@^0.63.1":
+  version "0.63.1"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/react-northstar-fela-renderer/-/react-northstar-fela-renderer-0.63.1.tgz#1fdc58fa02e6800a9bc76eb2d499896759f48a24"
+  integrity sha1-H9xY+gLmgAqbx26y1JmJZ1n0iiQ=
   dependencies:
     "@babel/runtime" "^7.10.4"
-    "@fluentui/react-northstar-styles-renderer" "^0.60.1"
-    "@fluentui/styles" "^0.60.1"
+    "@fluentui/react-northstar-styles-renderer" "^0.63.1"
+    "@fluentui/styles" "^0.63.1"
     css-in-js-utils "^3.0.0"
     fela "^10.6.1"
     fela-plugin-embedded "^10.6.1"
     fela-plugin-fallback-value "^10.6.1"
     fela-plugin-placeholder-prefixer "^10.6.1"
     fela-plugin-rtl "^10.6.1"
+    fela-tools "^10.6.1"
     fela-utils "^10.6.1"
     inline-style-expand-shorthand "^1.2.0"
     lodash "^4.17.15"
     react-fela "^10.6.1"
     stylis "^3.5.4"
 
-"@fluentui/react-northstar-styles-renderer@^0.60.1":
-  version "0.60.1"
-  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/react-northstar-styles-renderer/-/react-northstar-styles-renderer-0.60.1.tgz#1383874ad73c10fbb41787ecf6e353057d1c2d29"
-  integrity sha1-E4OHStc8EPu0F4fs9uNTBX0cLSk=
+"@fluentui/react-northstar-styles-renderer@^0.63.1":
+  version "0.63.1"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/react-northstar-styles-renderer/-/react-northstar-styles-renderer-0.63.1.tgz#aae6a36feef01b525e67c28c3cbab9bd10bdc482"
+  integrity sha1-quajb+7wG1JeZ8KMPLq5vRC9xII=
   dependencies:
     "@babel/runtime" "^7.10.4"
-    "@fluentui/styles" "^0.60.1"
+    "@fluentui/styles" "^0.63.1"
 
-"@fluentui/react-northstar@^0.60.1":
-  version "0.60.1"
-  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/react-northstar/-/react-northstar-0.60.1.tgz#aaa6b3fe2c89d7a2378feabf81244c138117050d"
-  integrity sha1-qqaz/iyJ16I3j+q/gSRME4EXBQ0=
+"@fluentui/react-northstar@^0.63.1":
+  version "0.63.1"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/react-northstar/-/react-northstar-0.63.1.tgz#6847b08b49d105e1f5d699f10f7cecc6f31ea9f3"
+  integrity sha1-aEewi0nRBeH11pnxD3zsxvMeqfM=
   dependencies:
     "@babel/runtime" "^7.10.4"
-    "@fluentui/accessibility" "^0.60.1"
+    "@fluentui/accessibility" "^0.63.1"
     "@fluentui/dom-utilities" "^1.1.1"
-    "@fluentui/react-bindings" "^0.60.1"
-    "@fluentui/react-component-event-listener" "^0.60.1"
-    "@fluentui/react-component-nesting-registry" "^0.60.1"
-    "@fluentui/react-component-ref" "^0.60.1"
-    "@fluentui/react-icons-northstar" "^0.60.1"
-    "@fluentui/react-northstar-styles-renderer" "^0.60.1"
-    "@fluentui/react-proptypes" "^0.60.1"
-    "@fluentui/state" "^0.60.1"
-    "@fluentui/styles" "^0.60.1"
+    "@fluentui/react-bindings" "^0.63.1"
+    "@fluentui/react-component-event-listener" "^0.63.1"
+    "@fluentui/react-component-nesting-registry" "^0.63.1"
+    "@fluentui/react-component-ref" "^0.63.1"
+    "@fluentui/react-icons-northstar" "^0.63.1"
+    "@fluentui/react-northstar-styles-renderer" "^0.63.1"
+    "@fluentui/react-portal-compat-context" "^9.0.0-rc.2"
+    "@fluentui/react-proptypes" "^0.63.1"
+    "@fluentui/state" "^0.63.1"
+    "@fluentui/styles" "^0.63.1"
     "@popperjs/core" "~2.4.3"
-    "@uifabric/utilities" "^7.32.3"
     body-scroll-lock "^3.1.5"
     classnames "^2.2.6"
     compute-scroll-into-view "1.0.11"
@@ -1095,29 +1095,36 @@
     react-is "^16.6.3"
     react-transition-group "^4.4.1"
 
-"@fluentui/react-proptypes@^0.60.1":
-  version "0.60.1"
-  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/react-proptypes/-/react-proptypes-0.60.1.tgz#4a371b483594da86c4f7440163a74b188e3ba4ed"
-  integrity sha1-SjcbSDWU2obE90QBY6dLGI47pO0=
+"@fluentui/react-portal-compat-context@^9.0.0-rc.2":
+  version "9.0.1"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/react-portal-compat-context/-/react-portal-compat-context-9.0.1.tgz#444b0bd2c525f0559302181b0982ed42eac97f71"
+  integrity sha1-REsL0sUl8FWTAhgbCYLtQurJf3E=
+  dependencies:
+    tslib "^2.1.0"
+
+"@fluentui/react-proptypes@^0.63.1":
+  version "0.63.1"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/react-proptypes/-/react-proptypes-0.63.1.tgz#1a79c3f1fa1cba8a66a2dd1e998e11485a1df6d8"
+  integrity sha1-GnnD8focuopmot0emY4RSFod9tg=
   dependencies:
     "@babel/runtime" "^7.10.4"
     lodash "^4.17.15"
     prop-types "^15.7.2"
 
-"@fluentui/state@^0.60.1":
-  version "0.60.1"
-  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/state/-/state-0.60.1.tgz#f44c34912eeaaa70d5abc5ab963f92f2dc644491"
-  integrity sha1-9Ew0kS7qqnDVq8Wrlj+S8txkRJE=
+"@fluentui/state@^0.63.1":
+  version "0.63.1"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/state/-/state-0.63.1.tgz#0d7c55beedccff685f47fad6230c8ac650da70d2"
+  integrity sha1-DXxVvu3M/2hfR/rWIwyKxlDacNI=
   dependencies:
     "@babel/runtime" "^7.10.4"
 
-"@fluentui/styles@^0.60.1":
-  version "0.60.1"
-  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/styles/-/styles-0.60.1.tgz#46fb8cc8655dbba5b9416e7c85be5e2dbadd700f"
-  integrity sha1-RvuMyGVdu6W5QW58hb5eLbrdcA8=
+"@fluentui/styles@^0.63.1":
+  version "0.63.1"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@fluentui/styles/-/styles-0.63.1.tgz#977a44da98e2ea18639b3e1f17a6dc54be8cc43d"
+  integrity sha1-l3pE2pji6hhjmz4fF6bcVL6MxD0=
   dependencies:
     "@babel/runtime" "^7.10.4"
-    csstype "^2.6.7"
+    csstype "^3.0.2"
     lodash "^4.17.15"
 
 "@griffel/core@^1.0.7":
@@ -1438,30 +1445,11 @@
     "@typescript-eslint/types" "5.18.0"
     eslint-visitor-keys "^3.0.0"
 
-"@uifabric/merge-styles@^7.19.2":
-  version "7.19.2"
-  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@uifabric/merge-styles/-/merge-styles-7.19.2.tgz#e020adc2f9b238f0feb855274dfeedaf6d5822a7"
-  integrity sha1-4CCtwvmyOPD+uFUnTf7tr21YIqc=
-  dependencies:
-    "@uifabric/set-version" "^7.0.24"
-    tslib "^1.10.0"
-
 "@uifabric/set-version@^7.0.24":
   version "7.0.24"
   resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@uifabric/set-version/-/set-version-7.0.24.tgz#8c67d8f1d67c1636a170efa8b622132da2d294a9"
   integrity sha1-jGfY8dZ8FjahcO+otiITLaLSlKk=
   dependencies:
-    tslib "^1.10.0"
-
-"@uifabric/utilities@^7.32.3":
-  version "7.34.1"
-  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/@uifabric/utilities/-/utilities-7.34.1.tgz#3b8ccf1a75d90b5336a8670ba8c7d6aceeeb97b3"
-  integrity sha1-O4zPGnXZC1M2qGcLqMfWrO7rl7M=
-  dependencies:
-    "@fluentui/dom-utilities" "^1.1.2"
-    "@uifabric/merge-styles" "^7.19.2"
-    "@uifabric/set-version" "^7.0.24"
-    prop-types "^15.7.2"
     tslib "^1.10.0"
 
 "@ungap/promise-all-settled@1.1.2":
@@ -2073,7 +2061,7 @@ css-in-js-utils@^3.0.0:
   dependencies:
     hyphenate-style-name "^1.0.3"
 
-csstype@^2.5.5, csstype@^2.6.7:
+csstype@^2.5.5:
   version "2.6.20"
   resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/csstype/-/csstype-2.6.20.tgz#9229c65ea0b260cf4d3d997cb06288e36a8d6dda"
   integrity sha1-kinGXqCyYM9NPZl8sGKI42qNbdo=
@@ -2448,7 +2436,7 @@ fela-plugin-rtl@^10.6.1:
   dependencies:
     rtl-css-js "^1.1.3"
 
-fela-tools@^10.8.2:
+fela-tools@^10.6.1, fela-tools@^10.8.2:
   version "10.8.2"
   resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/fela-tools/-/fela-tools-10.8.2.tgz#de8916173abd7d0436a6d9f726f7434209d70ee0"
   integrity sha1-3okWFzq9fQQ2ptn3JvdDQgnXDuA=
@@ -3609,14 +3597,6 @@ safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/safe-buffer/-/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
   integrity sha1-mR7GnSluAxN0fVm9/St0XDX4go0=
 
-scheduler@^0.20.1:
-  version "0.20.2"
-  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/scheduler/-/scheduler-0.20.2.tgz#4baee39436e34aa93b4874bddcbf0fe8b8b50e91"
-  integrity sha1-S67jlDbjSqk7SHS93L8P6Li1DpE=
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-
 scheduler@^0.21.0:
   version "0.21.0"
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.21.0.tgz#6fd2532ff5a6d877b6edb12f00d8ab7e8f308820"
@@ -4003,25 +3983,25 @@ v9helper-babel-plugin-shorthands@^0.0.3:
     "@babel/core" "^7.17.5"
     "@griffel/core" "^1.0.7"
 
-v9helper-transform-style-object@^0.0.3:
-  version "0.0.3"
-  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/v9helper-transform-style-object/-/v9helper-transform-style-object-0.0.3.tgz#18216baadab4c9382046ccbacc0ec0a0138c4823"
-  integrity sha1-GCFrqtq0yTggRsy6zA7AoBOMSCM=
+v9helper-transform-style-object@^0.0.5:
+  version "0.0.5"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/v9helper-transform-style-object/-/v9helper-transform-style-object-0.0.5.tgz#8f7053bcf3e63833f970d03c902a4942272f432d"
+  integrity sha1-j3BTvPPmODP5cNA8kCpJQicvQy0=
   dependencies:
     "@babel/core" "^7.17.5"
     "@babel/standalone" "^7.17.6"
     "@griffel/core" "^1.0.7"
     v9helper-babel-plugin-shorthands "^0.0.3"
 
-v9helper@^0.0.6:
-  version "0.0.6"
-  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/v9helper/-/v9helper-0.0.6.tgz#cc590cd59ea117ff79cc8187cb26b86c1256c4c4"
-  integrity sha1-zFkM1Z6hF/95zIGHyya4bBJWxMQ=
+v9helper@^0.0.8:
+  version "0.0.8"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/v9helper/-/v9helper-0.0.8.tgz#f2ac9468d282d20ff9119fc5c9ff642aa31f2b6b"
+  integrity sha1-8qyUaNKC0g/5EZ/Fyf9kKqMfK2s=
   dependencies:
     "@babel/core" "^7.17.5"
     "@babel/preset-typescript" "^7.16.7"
     "@babel/standalone" "^7.17.6"
-    "@fluentui/react-northstar" "^0.60.1"
+    "@fluentui/react-northstar" "^0.63.1"
     "@griffel/core" "^1.0.7"
     "@linaria/shaker" "^3.0.0-beta.15"
     lodash "^4.17.21"
